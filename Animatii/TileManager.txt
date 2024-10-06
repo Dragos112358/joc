@@ -1,0 +1,140 @@
+public void draw(Graphics2D g2)
+    {
+        //g2.drawImage(tile[0].image,0,0,gp.tilesize,gp.tilesize,null);
+        //g2.drawImage(tile[1].image,48,0,gp.tilesize,gp.tilesize,null);
+        //g2.drawImage(tile[2].image,96,0,gp.tilesize,gp.tilesize,null);
+        int worldCol=0;
+        int worldRow=0;
+        while(worldCol<gp.maxWorldCol && worldRow<gp.maxWorldRow)
+        {
+            int TileNum=MapTileNum[worldCol][worldRow];
+            int WorldX=worldCol*gp.tilesize;
+            int WorldY=worldRow*gp.tilesize;
+            int ScreenX=WorldX-gp.player.worldX+gp.player.screenX;
+            int ScreenY=WorldY-gp.player.worldY+gp.player.screenY;
+            if(WorldX>=gp.player.worldX-gp.player.screenX-780 && WorldX<=gp.player.worldX+gp.player.screenX+780
+                    && WorldY>=gp.player.worldY-gp.player.screenY-780 && WorldY<=gp.player.worldY+gp.player.screenY+780) {
+                g2.drawImage(tile[TileNum].image, ScreenX, ScreenY, gp.tilesize, gp.tilesize, null);
+            }
+            if(WorldX>=gp.player.worldX-gp.player.screenX-780 && WorldX<=gp.player.worldX+gp.player.screenX+780
+                    && WorldY>=gp.player.worldY-gp.player.screenY-780 && WorldY<=gp.player.worldY+gp.player.screenY+780 && TileNum > 7) {
+                g2.drawImage(tile[0].image, ScreenX, ScreenY, gp.tilesize, gp.tilesize, null);
+            }
+            worldCol++;
+            if(worldCol==gp.maxWorldCol)
+            {
+                worldCol=0;
+                worldRow++;
+            }
+        }
+        worldCol=0;
+        worldRow=0;
+        while(worldCol<gp.maxWorldCol && worldRow<gp.maxWorldRow)
+        {
+            int TileNum=MapTileNum[worldCol][worldRow];
+            int WorldX=worldCol*gp.tilesize;
+            int WorldY=worldRow*gp.tilesize;
+            int ScreenX=WorldX-gp.player.worldX+gp.player.screenX;
+            int ScreenY=WorldY-gp.player.worldY+gp.player.screenY;
+            if(WorldX>=gp.player.worldX-gp.player.screenX-780 && WorldX<=gp.player.worldX+gp.player.screenX+780 && WorldY>=gp.player.worldY-gp.player.screenY-780 && WorldY<=gp.player.worldY+gp.player.screenY+780) {
+                if(TileNum==7) {
+                    //System.out.println("Trece\n");
+                    g2.drawImage(tile[7].image, ScreenX, ScreenY, gp.tilesize * 2, gp.tilesize * 2, null);
+                }
+            }
+            worldCol++;
+            if(worldCol==gp.maxWorldCol)
+            {
+                worldCol=0;
+                worldRow++;
+            }
+        }
+        worldCol=0;
+        worldRow=0;
+        while(worldCol<gp.maxWorldCol && worldRow<gp.maxWorldRow)
+        {
+            int TileNum=MapTileNum[worldCol][worldRow];
+            int WorldX=worldCol*gp.tilesize;
+            int WorldY=worldRow*gp.tilesize;
+            int ScreenX=WorldX-gp.player.worldX+gp.player.screenX;
+            int ScreenY=WorldY-gp.player.worldY+gp.player.screenY;
+            if(WorldX>=gp.player.worldX-gp.player.screenX-780 && WorldX<=gp.player.worldX+gp.player.screenX+780 && WorldY>=gp.player.worldY-gp.player.screenY-780 && WorldY<=gp.player.worldY+gp.player.screenY+780) {
+                if(TileNum==8) {
+                    //System.out.println("Trece\n");
+                    g2.drawImage(tile[8].image, ScreenX, ScreenY, gp.tilesize * 6, gp.tilesize * 6, null);
+                }
+            }
+            worldCol++;
+            if(worldCol==gp.maxWorldCol)
+            {
+                worldCol=0;
+                worldRow++;
+            }
+        }
+        worldCol=0;
+        worldRow=0;
+        while(worldCol<gp.maxWorldCol && worldRow<gp.maxWorldRow)
+        {
+            int TileNum=MapTileNum[worldCol][worldRow];
+            int WorldX=worldCol*gp.tilesize;
+            int WorldY=worldRow*gp.tilesize;
+            int ScreenX=WorldX-gp.player.worldX+gp.player.screenX;
+            int ScreenY=WorldY-gp.player.worldY+gp.player.screenY;
+            if(WorldX>=gp.player.worldX-gp.player.screenX-1780 && WorldX<=gp.player.worldX+gp.player.screenX+1780 && WorldY>=gp.player.worldY-gp.player.screenY-1780 && WorldY<=gp.player.worldY+gp.player.screenY+1780) {
+                if(TileNum==9) {
+                    //System.out.println("Trece\n");
+                    g2.drawImage(tile[9].image, ScreenX, ScreenY, gp.tilesize*5, gp.tilesize*15, null);
+                }
+            }
+            worldCol++;
+            if(worldCol==gp.maxWorldCol)
+            {
+                worldCol=0;
+                worldRow++;
+            }
+        }
+        worldCol=0;
+        worldRow=0;
+        while(worldCol<gp.maxWorldCol && worldRow<gp.maxWorldRow)
+        {
+            int TileNum=MapTileNum[worldCol][worldRow];
+            int WorldX=worldCol*gp.tilesize;
+            int WorldY=worldRow*gp.tilesize;
+            int ScreenX=WorldX-gp.player.worldX+gp.player.screenX;
+            int ScreenY=WorldY-gp.player.worldY+gp.player.screenY;
+            if(WorldX>=gp.player.worldX-gp.player.screenX-780 && WorldX<=gp.player.worldX+gp.player.screenX+780 && WorldY>=gp.player.worldY-gp.player.screenY-780 && WorldY<=gp.player.worldY+gp.player.screenY+780) {
+                if(TileNum==10) {
+                    //System.out.println("Trece\n");
+                    g2.drawImage(tile[10].image, ScreenX, ScreenY, gp.tilesize, gp.tilesize, null);
+                }
+            }
+            worldCol++;
+            if(worldCol==gp.maxWorldCol)
+            {
+                worldCol=0;
+                worldRow++;
+            }
+        }
+        worldCol=0;
+        worldRow=0;
+        while(worldCol<gp.maxWorldCol && worldRow<gp.maxWorldRow)
+        {
+            int TileNum=MapTileNum[worldCol][worldRow];
+            int WorldX=worldCol*gp.tilesize;
+            int WorldY=worldRow*gp.tilesize;
+            int ScreenX=WorldX-gp.player.worldX+gp.player.screenX;
+            int ScreenY=WorldY-gp.player.worldY+gp.player.screenY;
+            if(WorldX>=gp.player.worldX-gp.player.screenX-780 && WorldX<=gp.player.worldX+gp.player.screenX+780 && WorldY>=gp.player.worldY-gp.player.screenY-780 && WorldY<=gp.player.worldY+gp.player.screenY+780) {
+                if(TileNum==11) {
+                    //System.out.println("Trece\n");
+                    g2.drawImage(tile[11].image, ScreenX, ScreenY, gp.tilesize, gp.tilesize, null);
+                }
+            }
+            worldCol++;
+            if(worldCol==gp.maxWorldCol)
+            {
+                worldCol=0;
+                worldRow++;
+            }
+        }
+    } 
