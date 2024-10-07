@@ -115,7 +115,7 @@ public class TileManager {
 
             // Split the string into individual numbers
             String[] numbers = line.split(" ");
-            System.out.println(numbers.length);
+            //System.out.println(numbers.length);
             //System.out.println(line);
             // Loop through each number and place it into the correct matrix position
             for (int i = 0; i < gp.maxWorldRow*gp.maxWorldCol; i++) {
