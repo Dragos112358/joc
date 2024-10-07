@@ -139,7 +139,7 @@ public class gamepanel extends JPanel implements Runnable, MouseListener {
             isPaused = !isPaused; // Pune pauza sau reia jocul
             first_time = false;
             mouseH.leftClick = false;
-            System.out.println("Game " + (isPaused ? "paused" : "resumed"));
+           // System.out.println("Game " + (isPaused ? "paused" : "resumed"));
         }
         // Dacă jocul este în pauză și jucătorul a murit, afișează opțiunea "Play Again"
         if (player.hp <= 0 || isPaused == true) {
@@ -289,7 +289,7 @@ public class gamepanel extends JPanel implements Runnable, MouseListener {
                                 showingDifficultyMenu = false;  // Revenim la meniul principal
                             } else {
                                 selectedDifficulty = difficultyOption;  // Salvăm dificultatea selectată
-                                System.out.println("Selected Difficulty: " + selectedDifficulty);
+                              //  System.out.println("Selected Difficulty: " + selectedDifficulty);
                                 showingDifficultyMenu = false;  // Revenim la meniul principal
                             }
 
@@ -588,7 +588,7 @@ public class gamepanel extends JPanel implements Runnable, MouseListener {
                     }
                 } catch (NumberFormatException e) {
                     // Dacă există o linie invalidă, o ignorăm
-                    System.out.println("Linie invalidă: " + line);
+                  //  System.out.println("Linie invalidă: " + line);
                 }
             }
         } catch (IOException e) {
@@ -601,7 +601,7 @@ public class gamepanel extends JPanel implements Runnable, MouseListener {
     }
 
     public void saveTotalMoney(int totalmoney) {
-        String filePath = "C:/Users/gbonc/OneDrive/Desktop/POO anul 2 semestrul 1/joc/Animatii/high_scores.txt";
+        String filePath = "../joc/Animatii/high_scores.txt";
 
         // Obținem data curentă în formatul dorit
         SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");

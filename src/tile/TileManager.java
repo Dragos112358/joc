@@ -120,7 +120,7 @@ public class TileManager {
             // Loop through each number and place it into the correct matrix position
             for (int i = 0; i < gp.maxWorldRow*gp.maxWorldCol; i++) {
                 int num = Integer.parseInt(numbers[i]);
-                System.out.printf("%d ",num);
+                //System.out.printf("%d ",num);
                 // Place the number in the matrix
                 MapTileNum[col][row] = num;
                 col++;
